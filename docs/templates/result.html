@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>Result</h1>
+<h2>Original Image: {{ orig }}</h2>
+<img alt="Original Image" src="{{ url_for('uploaded_file', filename='orig.png') }}">
+<h2>Transformed Image</h2>
+<img alt="Transformed Image" src="{{ url_for('uploaded_file', filename='transformed.png') }}">
+<h2>Color Distribution</h2>
+<img alt="Color Distribution" src="{{ url_for('uploaded_file', filename='plot.png') }}">
+<button onclick="history.back()">Go back</button>
+</body>
+</html>
